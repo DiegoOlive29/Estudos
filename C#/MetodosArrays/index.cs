@@ -43,7 +43,29 @@ class index
 
         Console.WriteLine("_____________________________________________");
 
+        Console.WriteLine("getLowerBound");
+        int menorIndeceVetor =vetor1.GetLowerBound(0);
+        int MenorindiceMatriz_d1= matriz.GetLowerBound(1);
+        Console.WriteLine("menor indice do vetor1 {0}",menorIndeceVetor);
 
+        Console.WriteLine("_____________________________________________");
+
+        Console.WriteLine("GetUpperBound");
+        int MaiorIndeceVetor = vetor1.GetUpperBound(0);
+        int MaiorIndiceMatriz_d1 = matriz.GetUpperBound(1);
+        Console.WriteLine("menor indice do vetor1 {0}",MaiorIndeceVetor);
+
+        Console.WriteLine("_____________________________________________");
+
+        Console.WriteLine("GetValue");
+        int valor0 = Convert.ToInt32(vetor1.GetValue(3));
+        int valor1 = Convert.ToInt32(matriz.GetValue(1,3));
+        Console.WriteLine("Valor da pisção 3 do vetor1 {0}",valor0);
+
+        Console.WriteLine("_____________________________________________");
+        Console.WriteLine("IndexOf: entrega a primeira aparição do valor mencionado, buscando em um array, lastIndexOf entrega a ultima aparição.");
+        Console.WriteLine("Reverse, altera a onder dos valores do array deixando ao contrario");
+        Console.WriteLine("Sort, altera a onder dos valores do array deixanto em ordem crescente.");  
     }
 
 }
