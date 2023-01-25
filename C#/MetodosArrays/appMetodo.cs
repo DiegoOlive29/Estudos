@@ -23,6 +23,7 @@ class Aula24{
         Console.WriteLine("A soma de {0} e {1} é :{2}",n1,n2,res);
     }
 
+//  Metodos  com retorno deve ter o tipo do seu retorno informado. 
     static int somaRetorno (int n1, int n2){
         int res = n1 + n2;
         return res;
