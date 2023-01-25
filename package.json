@@ -1,0 +1,8 @@
+{
+  "name": "Estudos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:DiegoOlive29/Estudos.git",
+  "author": "Diego Oliveira <Diego.o.guimaraes29@gmail.com>",
+  "license": "MIT"
+}
