@@ -2,13 +2,9 @@ using System;
 
 class Aula24{
     static void Main(){
-        int r, v1 ,v2;
-        v1=Convert.ToInt32(Console.ReadLine());
-        v2=Convert.ToInt32(Console.ReadLine());
-        
-        
-        r = somaRetorno(v1,v2);
-        Console.WriteLine(r);
+       int num =10;
+       dobrar(ref num);
+       Console.WriteLine(num);
     }
 
 // metodo void não retorna nada.
@@ -28,4 +24,10 @@ class Aula24{
         int res = n1 + n2;
         return res;
     }
+
+//  uso de ref na função fará com que o valor do parametro usado sejá alterado na sua origem. 
+    static void dobrar(ref int valor){
+        valor*=2;
+    }
 }
+
