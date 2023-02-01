@@ -2,9 +2,13 @@ using System;
 
 class Aula24{
     static void Main(){
-       int num =10;
-       dobrar(ref num);
-       Console.WriteLine(num);
+      int divid, divis, quoc, rest;
+
+      divid= 10;
+      divis= 5;
+      quoc=dividir(divid,divis,out rest);
+
+      Console.WriteLine("{0}/{1}: quociente- {2} e resto={3}",divid,divis,quoc,rest);
     }
 
 // metodo void não retorna nada.
@@ -29,5 +33,18 @@ class Aula24{
     static void dobrar(ref int valor){
         valor*=2;
     }
+    
+
+    static int dividir(int dividendo, int divisor,out int resto ){
+
+            int quociente;
+
+            quociente = dividendo/divisor;
+            resto = dividendo%divisor;
+
+            return quociente;
+    }
+
+
 }
 
