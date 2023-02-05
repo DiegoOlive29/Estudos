@@ -28,7 +28,9 @@ public class Player {
         vivo = true;
         nome = n;
     }
-
+    ~Player (){
+        Console.WriteLine("Jogador {0} foi eliminado.",nome);
+    }
 
 }
 
