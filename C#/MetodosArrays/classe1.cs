@@ -23,27 +23,46 @@ public class Player {
     public string nome;
 
     //metodo contrutor, precisa ter o nome da classe.
+     public Player(){
+        vida = 100;
+        vivo = true;
+        nome = "Player";
+    }
     public Player(string n){
         vida = 100;
         vivo = true;
         nome = n;
     }
-    ~Player (){
-        Console.WriteLine("Jogador {0} foi eliminado.",nome);
+     public Player(string n, int v, bool s){
+        vida = v;
+        vivo = s;
+        nome = n;
     }
+
+    public void info(){
+        Console.WriteLine("Nome do jogador é {0}!",nome);
+        Console.WriteLine("Quantidade de vida do jogador {0}.",vida);
+        Console.WriteLine("Status do jogador: {0}\n",vivo);
+
+    }
+
+    // ~Player (){
+    //     Console.WriteLine("Jogador {0} foi eliminado.",nome);
+    // }
 
 }
 
 class Index{
     static void Main(){
-        Player p1 = new Player("Diego");
+        Player p1 = new Player();
         Player p2 = new Player("Luan");
-        Player p3 = new Player("Pedro");
+        Player p3 = new Player("Pedro",90,true);
 
+        p1.info();
 
-        Console.WriteLine("Vida do jogador 1: {0}", p1.nome);
-        Console.WriteLine("Vida do jogador 1: {0}", p2.nome);
-        Console.WriteLine("Vida do jogador 1: {0}", p3.nome);
+        p2.info();
+
+        p3.info();
 
     }
 }
