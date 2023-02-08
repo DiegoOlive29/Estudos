@@ -18,6 +18,7 @@ using System;
     // static: o metodo pdoe ser chamado mesmo sem a instaciação de um objeto.
 
 public class Player {
+
     public int vida;
     public bool vivo;
     public string nome;
@@ -39,6 +40,8 @@ public class Player {
         nome = n;
     }
 
+
+
     public void info(){
         Console.WriteLine("Nome do jogador é {0}!",nome);
         Console.WriteLine("Quantidade de vida do jogador {0}.",vida);
@@ -58,6 +61,11 @@ class Index{
         Player p2 = new Player("Luan");
         Player p3 = new Player("Pedro",90,true);
 
+
+        Inimigo i1 = new Inimigo("Doido");
+
+        Inimigo.alerta =true;
+
         p1.info();
 
         p2.info();
@@ -66,3 +74,22 @@ class Index{
 
     }
 }
+
+static public class Jogador{
+    
+}
+ public class Inimigo   {
+    static public bool alerta;
+
+    public string nome;
+
+    public Inimigo(string n){
+        alerta = false;
+        nome = n;
+    }
+
+    public void info(){
+        Console.WriteLine("Nome do inimigo é {0}!",nome);
+        Console.WriteLine("Status do inimigo  {0}.",alerta);
+}
+
