@@ -4,10 +4,15 @@ class Veiculo{
     
     //Classe base
 
-    public int rodas;
+    private int rodas;
     public int velMax;
 
     private bool ligado;
+
+
+    public Veiculo(int rodas){
+        this.rodas =rodas;
+    }
 
     public void desligado(){
         ligado = false;
@@ -18,13 +23,12 @@ class Veiculo{
     }
 
     public string getLigado(){
-        if(ligado){
-            return "sim";
+        return (ligado? "sim": "não");
+       
+    }
 
-
-        }else{
-            return "não";
-        }
+    public int getRodas(){
+        return rodas;
     }
 
    
@@ -37,9 +41,8 @@ class Carro:Veiculo{
         public string cor ; 
 
 
-    public Carro(string nome, string cor){
+    public Carro(string nome, string cor):base(4){
         desligado();
-        rodas  = 4 ;
         velMax = 150 ; 
     
         this.nome = nome;
@@ -57,7 +60,7 @@ class Index
 
          Console.WriteLine("Cor.................: {0}.", c1.cor);
          Console.WriteLine("Nome................: {0}.", c1.nome);
-         Console.WriteLine("Rodas...............: {0}.", c1.rodas);
+         Console.WriteLine("Rodas...............: {0}.", c1.getRodas());
          Console.WriteLine("Velociadade maxima..: {0}.", c1.velMax);
          Console.WriteLine("Ligado..............: {0}.", c1.getLigado());
          
