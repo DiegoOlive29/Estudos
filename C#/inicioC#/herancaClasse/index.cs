@@ -31,7 +31,18 @@ class Veiculo{
         return rodas;
     }
 
-   
+    public void setRodas(int n){
+    if(n<0){
+    this.rodas  = 0;
+
+    }
+    if(n>40){
+    this.rodas  = 40;
+    
+    }else{
+    this.rodas = n;
+    }
+   }
 }
 
 
@@ -53,18 +64,34 @@ class Carro:Veiculo{
     }
 }
 
+class CarroCombate:Carro{
+    public int monicao;
+    
+    public CarroCombate():base("Carro Combate","Verde"){
+        monicao =100;
+        setRodas(6);
+
+    }
+}
+
 class Index
 {
     static void Main(){
-         Carro c1 = new Carro("Creta", "Preto");
+        Carro c1 = new Carro("Creta", "Preto");
+        CarroCombate cC1 = new CarroCombate();
 
-         Console.WriteLine("Cor.................: {0}.", c1.cor);
-         Console.WriteLine("Nome................: {0}.", c1.nome);
-         Console.WriteLine("Rodas...............: {0}.", c1.getRodas());
-         Console.WriteLine("Velociadade maxima..: {0}.", c1.velMax);
-         Console.WriteLine("Ligado..............: {0}.", c1.getLigado());
-         
-       
+        Console.WriteLine("Cor.................: {0}.", c1.cor);
+        Console.WriteLine("Nome................: {0}.", c1.nome);
+        Console.WriteLine("Rodas...............: {0}.", c1.getRodas());
+        Console.WriteLine("Velociadade maxima..: {0}.", c1.velMax);
+        Console.WriteLine("Ligado..............: {0}.", c1.getLigado());
+        Console.WriteLine("......................................");
+        Console.WriteLine("Cor.................: {0}.", cC1.cor);
+        Console.WriteLine("Nome................: {0}.", cC1.nome);
+        Console.WriteLine("Rodas...............: {0}.", cC1.getRodas());
+        Console.WriteLine("Velociadade maxima..: {0}.", cC1.velMax);
+        Console.WriteLine("Ligado..............: {0}.", cC1.getLigado());
+        Console.WriteLine("Ligado..............: {0}.", cC1.monicao);
     }
 
 }
