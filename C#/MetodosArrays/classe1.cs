@@ -78,7 +78,8 @@ class Index{
 static public class Jogador{
     
 }
- public class Inimigo   {
+
+public class Inimigo   {
     static public bool alerta;
 
     public string nome;
@@ -91,5 +92,5 @@ static public class Jogador{
     public void info(){
         Console.WriteLine("Nome do inimigo é {0}!",nome);
         Console.WriteLine("Status do inimigo  {0}.",alerta);
+    }
 }
-
