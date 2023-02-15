@@ -31,6 +31,10 @@ class Veiculo{
         return rodas;
     }
 
+    virtual public void info(){
+        Console.WriteLine("Metodo Virtual");
+    }
+
     public void setRodas(int n){
     if(n<0){
     this.rodas  = 0;
@@ -62,6 +66,9 @@ class Carro:Veiculo{
 
         
     }
+    override public void info(){
+        Console.WriteLine("Metodo Virtual reescrito");
+    }
 }
 
 class CarroCombate:Carro{
@@ -92,6 +99,7 @@ class Index
         Console.WriteLine("Velociadade maxima..: {0}.", cC1.velMax);
         Console.WriteLine("Ligado..............: {0}.", cC1.getLigado());
         Console.WriteLine("Ligado..............: {0}.", cC1.monicao);
+        c1.info();
     }
 
 }
