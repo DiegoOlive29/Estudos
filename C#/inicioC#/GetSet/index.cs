@@ -4,38 +4,35 @@ using System;
 
 sealed class Carro
 {
-    private int velMAX;
 
-   
+    private int[] velMax = new int[5]{80,120,160,240,300};
 
-    public int vm
+    public int this [int i]
     {
         get
         {
-            return velMAX;
+            return velMax[i];
         }
         //poder ser colocado somente um dos dois 
         set
         {
             if (value < 0)
             {
-                velMAX = 0;
+                velMax[i] = 0;
             }
             else if (value > 300)
             {
-                velMAX = 300;
+                velMax[i] = 300;
             }
             else
             {
-                velMAX = value;
+                velMax[i] = value;
             }
         }
     }
 
-     public Carro()
-    {
-        vm = 120;
-    }
+     public Carro(){}
+   
 }
 
 
@@ -47,9 +44,9 @@ class Index
     {
         Carro carro1 = new Carro();
 
-        carro1.vm = 200;
+        carro1[4] = 200;
 
-        Console.WriteLine("velocidade:{0}",carro1.vm);
+        Console.WriteLine("velocidade:{0}",carro1[4]);
 
     }
 }
